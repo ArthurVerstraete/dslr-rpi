@@ -3,7 +3,7 @@
 sudo apt-get install gphoto2
 ```
 
-# Before running the script with automatic taking pics
+# Before running the script
 ```
 gphoto2 -get-config capturetarget
 ```
