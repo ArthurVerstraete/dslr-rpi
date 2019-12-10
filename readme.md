@@ -12,5 +12,15 @@ Check the current. If the current is 'Internal RAM', execude next command (repla
 gphoto2 -set-config capturetarget=[choice_number]
 ```
 
+```
+chmod +x ./uploadDSLRCaptures.sh
+```
+
 # Auto-detect DSLR
 ![](prove.jpg)
+
+# Running script
+We want the script to run every 30mins, so 30*60=1800.
+```
+watch -n 1800 ./uploadDSLRCaptures.sh
+```
