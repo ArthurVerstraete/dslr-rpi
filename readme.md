@@ -4,16 +4,18 @@ sudo apt-get install gphoto2
 ```
 
 # Before running the script
-## Example of auto-detect DSLR
-Auto-detect your DSLR:
-![](prove.jpg)
-Here, the DSLR is at USB-port 001/005. This port is used to change permissions.
-Change permissions:
+## Scripts
+
 ```
-sudo chmod 777 /dev/bus/usb/001/005
+chmod +x ./uploadDSLRCaptures.sh
 ```
 
-## Others
+```
+chmod +x ./settings.sh
+```
+## This is done by the setSettings script:
+From here on, you don't have to do anything. The rest of this 'chapter' is done by the script ./setSettings.sh. These are just examples on how it's done. The only thing you should do, is testing whether your DSLR is auto-detected or not. If no, this program won't work for you.
+### Others
 ```
 gphoto2 -get-config capturetarget
 ```
@@ -21,12 +23,19 @@ Check the current. If the current is 'Internal RAM', execude next command (repla
 ```
 gphoto2 -set-config capturetarget=[choice_number]
 ```
-
+### Example of auto-detect DSLR
+Auto-detect your DSLR:
+![](prove.jpg)
+Here, the DSLR is at USB-port 001/005. This port is used to change permissions.
+Change permissions:
 ```
-chmod +x ./uploadDSLRCaptures.sh
+sudo chmod 777 /dev/bus/usb/001/005
 ```
-
-# Running script
+# Running scripts
+First, apply the settings:
+```
+./setSettings.sh
+```
 We want the script to run every 30mins, so 30*60=1800.
 ```
 watch -n 1800 ./uploadDSLRCaptures.sh
