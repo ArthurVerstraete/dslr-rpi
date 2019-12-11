@@ -15,7 +15,11 @@ sudo apt-get install gphoto2
 ### Scripts
 
 ```sh
-chmod +x ./uploadDSLRCaptures.sh
+chmod +x ./captureImageAndUpload.sh
+```
+
+```sh
+chmod +x ./uploadImages.sh
 ```
 
 ```sh
@@ -63,10 +67,10 @@ First, apply the settings:
 ./setSettings.sh
 ```
 
-We want the script to run every 30mins, so 30*60=1800.
+We want the script to run every 6mins, so 6*60=360.
 
 ```sh
-watch -n 1800 ./uploadDSLRCaptures.sh
+watch -n 360 ./captureImageAndUpload.sh
 ```
 
 ## What I used in this project
@@ -76,7 +80,7 @@ watch -n 1800 ./uploadDSLRCaptures.sh
 
 ## A reminder for myself
 
-- This command says no to all question of second command: 
+- This command says no to all question of second command:
 
 ```sh
 yes n | gphoto2 --get-all-files
