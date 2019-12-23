@@ -7,6 +7,9 @@ sudo apt-get install gphoto2
 sudo chmod +x ./captureImageAndUpload.sh
 sudo chmod +x ./setSettings.sh
 sudo chmod +x ./dropbox_uploader.sh
+echo ""
+echo ""
+echo ""
 ./dropbox_uploader.sh
 if  grep -Fxq "*/6 * * * * cd ${path} && ./captureImageAndUpload.sh" mycron 
 then
