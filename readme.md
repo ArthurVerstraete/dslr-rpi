@@ -1,6 +1,6 @@
 # Take pictures and upload to dropbox
 
-## Install packages
+<!-- ## Install packages
 
 ```sh
 yes | sudo apt-get update && yes | sudo apt-get upgrade
@@ -8,29 +8,29 @@ yes | sudo apt-get update && yes | sudo apt-get upgrade
 
 ```sh
 sudo apt-get install gphoto2
-```
+``` -->
 
 ## Before running the script
 
 ### Scripts
-
+<!-- 
 ```sh
 chmod +x ./captureImageAndUpload.sh
 ```
 
 ```sh
 chmod +x ./uploadImages.sh
-```
+``` -->
 
 ```sh
-chmod +x ./settings.sh
+chmod +x ./setSettings.sh
 ```
-
+<!-- 
 ```sh
 chmod +x ./dropbox_uploader.sh
-```
+``` -->
 
-### This is done by the setSettings script:
+<!-- ### This is done by the setSettings script:
 
 From here on, you don't have to do anything. The rest of this 'chapter' is done by the script ./setSettings.sh. These are just examples on how it's done. The only thing you should do, is testing whether your DSLR is auto-detected or not. If no, this program won't work for you.
 
@@ -57,31 +57,17 @@ Change permissions:
 
 ```sh
 sudo chmod 777 /dev/bus/usb/001/005
-```
+``` -->
 
 ## Running scripts
 
-First, apply the settings:
+First, apply the settings. This will create a cronjob that runs every 6 minutes:
 
 ```sh
 ./setSettings.sh
-```
-
-We want the script to run every 6mins, so 6*60=360.
-
-```sh
-watch -n 360 ./captureImageAndUpload.sh
 ```
 
 ## What I used in this project
 
 - gphoto2 ([Official Site](http://gphoto.org))
 - the Dropbox-Uploader of Andrea Fabrizi ([Github](https://github.com/andreafabrizi/Dropbox-Uploader))
-
-## A reminder for myself
-
-- This command says no to all question of second command:
-
-```sh
-yes n | gphoto2 --get-all-files
-```
