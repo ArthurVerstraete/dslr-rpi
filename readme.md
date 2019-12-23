@@ -12,6 +12,8 @@ sudo apt-get install gphoto2
 
 ## Before running the script
 
+sudo apt-get install git
+
 ### Scripts
 <!-- 
 ```sh
