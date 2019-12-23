@@ -10,7 +10,14 @@ sudo chmod +x ./dropbox_uploader.sh
 echo ""
 echo ""
 echo ""
-./dropbox_uploader.sh
+
+if test -f ~/.dropbox_uploader
+then
+	echo "there is already a dropbox uploader config file"
+else
+	./dropbox_uploader.sh
+fi
+
 if  grep -Fxq "*/6 * * * * cd ${path} && ./captureImageAndUpload.sh" mycron 
 then
 	echo "cronjob already in mycron"
