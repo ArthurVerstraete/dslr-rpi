@@ -38,7 +38,8 @@ First, apply the settings. This will create a cronjob that runs every 6 minutes:
 ./setSettings.sh
 ```
 
-If you see a line with hashtags, follow the instruction of the script after that line.
+If you see a line with hashtags, follow the instruction of the script after that line. 
+If they ask you if your access token looks ok, type in 'y' and press enter.
 
 ## What I used in this project
 
