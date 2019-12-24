@@ -5,11 +5,10 @@ path=$(pwd)
 yes | sudo apt-get update && yes | sudo apt-get upgrade
 sudo apt-get install gphoto2
 sudo chmod +x ./captureImageAndUpload.sh
-sudo chmod +x ./setSettings.sh
 sudo chmod +x ./dropbox_uploader.sh
 echo ""
 echo ""
-echo ""
+echo "##################################################################################"
 
 if test -f ~/.dropbox_uploader
 then

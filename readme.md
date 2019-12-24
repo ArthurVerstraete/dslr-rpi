@@ -1,65 +1,34 @@
 # Take pictures and upload to dropbox
 
-<!-- ## Install packages
+## Before you can clone the project
 
 ```sh
-yes | sudo apt-get update && yes | sudo apt-get upgrade
+sudo apt-get install git
 ```
 
+## Cloning the project
+
 ```sh
-sudo apt-get install gphoto2
-``` -->
+git clone https://github.com/ArthurVerstraete/dslr-rpi.git
+```
+
+Fill in your github-username and -password.
+
+### Go into the project-folder
+
+```sh
+cd dslr-rpi
+```
 
 ## Before running the script
 
-sudo apt-get install git
+Plug the usb in the Pi and in your DSLR and turn on your DSLR. Make sure you did this in this order.
 
 ### Scripts
-<!-- 
-```sh
-chmod +x ./captureImageAndUpload.sh
-```
-
-```sh
-chmod +x ./uploadImages.sh
-``` -->
 
 ```sh
 chmod +x ./setSettings.sh
 ```
-<!-- 
-```sh
-chmod +x ./dropbox_uploader.sh
-``` -->
-
-<!-- ### This is done by the setSettings script:
-
-From here on, you don't have to do anything. The rest of this 'chapter' is done by the script ./setSettings.sh. These are just examples on how it's done. The only thing you should do, is testing whether your DSLR is auto-detected or not. If no, this program won't work for you.
-
-#### Others
-
-```sh
-gphoto2 --get-config capturetarget
-```
-
-Check the current. If the current is 'Internal RAM', execude next command (replace [choice_number] with the choice number of 'Memory Card'). Otherwise just skip this part
-
-```sh
-gphoto2 --set-config capturetarget=[choice_number]
-```
-
-#### Example of auto-detect DSLR
-
-Auto-detect your DSLR:
-
-![gphoto2 --auto-detect](prove.jpg)
-
-Here, the DSLR is at USB-port 001/005. This port is used to change permissions.
-Change permissions:
-
-```sh
-sudo chmod 777 /dev/bus/usb/001/005
-``` -->
 
 ## Running scripts
 
@@ -68,6 +37,8 @@ First, apply the settings. This will create a cronjob that runs every 6 minutes:
 ```sh
 ./setSettings.sh
 ```
+
+If you see a line with hashtags, follow the instruction of the script after that line.
 
 ## What I used in this project
 
