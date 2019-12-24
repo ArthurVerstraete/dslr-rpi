@@ -10,5 +10,4 @@ gphoto2 --capture-image-and-download --keep
 mv *.JPG img/
 
 # use dropbox uploader script to upload script to dropbox
-# at first run, this will trigger a configuration for accessing your dropbox
 ./dropbox_uploader.sh upload img/*.JPG /
