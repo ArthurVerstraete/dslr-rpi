@@ -3,6 +3,12 @@
 ## Before you can clone the project
 
 ```sh
+yes | sudo apt-get update && yes | sudo apt-get upgrade
+```
+
+This will take a while.
+
+```sh
 sudo apt-get install git
 ```
 
